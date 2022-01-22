@@ -8,12 +8,37 @@
         <p class="result">{{ this.$store.state.axios_try }}</p>
       </li>
     </ul>
+    <img id="barcode" v-bind:src="barcodeImageSrc" />
   </div>
 </template>
 
 <script>
+import bwipjs from "bwip-js";
 export default {
   name: 'HelloWorld',
+  data() {
+    return {
+      barcodeValue: "test",
+    };
+  },
+  computed: {
+    barcodeImageSrc: function () {
+      console.log(this.barcodeValue);
+      return this.barcodeValue;
+    },
+  },
+  created() {
+    let canvas = document.createElement("canvas");
+    bwipjs.toCanvas(canvas, {
+      bcid: "code128", // Barcode type
+      text: "0123456782", // Text to encode
+      scale: 3, // 3x scaling factor
+      height: 10, // Bar height, in millimeters
+      includetext: true, // Show human-readable text
+      textxalign: "center", // Always good to set this
+    });
+    this.barcodeValue = canvas.toDataURL("image/png");
+  },
   methods: {
     axiosTest() {
       //console.log('click');
