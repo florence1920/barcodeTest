@@ -8,7 +8,7 @@
         <p class="result">{{ this.$store.state.axios_try }}</p>
       </li>
     </ul>
-    <img id="barcode" v-bind:src="barcodeImageSrc" />
+    <!-- <img id="barcode" v-bind:src="barcodeImageSrc" /> -->
   </div>
 </template>
 
