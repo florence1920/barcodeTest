@@ -1,9 +1,11 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/generate">About</router-link> |
-      <router-link to="/reader">Reader</router-link>
+      <router-link to="/">MainPage</router-link> |
+      <router-link to="/test">Test Home</router-link> |
+      <router-link to="/test/generate">Barcode Gen</router-link> |
+      <router-link to="/test/qrgenerate">QR Gen</router-link> |
+      <router-link to="/test/reader">QR Reader</router-link>
     </div>
     <div class="routerWrap">
       <router-view/>
