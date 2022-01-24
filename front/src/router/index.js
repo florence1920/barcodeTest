@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import QrReader from '../views/QrReader.vue'
 
 Vue.use(VueRouter)
 
@@ -19,7 +20,12 @@ const routes = [
     component: function () {
       return import(/* webpackChunkName: "about" */ '../views/About.vue')
     }
-  }
+  },
+  {
+    path: '/reader',
+    name: 'QrReader',
+    component: QrReader
+  },
 ]
 
 const router = new VueRouter({

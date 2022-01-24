@@ -9,8 +9,8 @@ export default new Vuex.Store({
     axios_try : '',
     check :{
       auth : false,
-      goodsNumber:0
-    }
+      goodsNumber:''
+    },
   },
   mutations: {
     SET_AXIOS(state, response){
