@@ -1,6 +1,6 @@
 <template>
   <div>
-      QR Reader
+      qrGen
   </div>
 </template>
 
