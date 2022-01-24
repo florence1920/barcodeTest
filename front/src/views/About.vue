@@ -1,9 +1,8 @@
 <template>
   <div class="about">
       <!-- <input v-model="barcodeValue" /><br> -->
-      <barcode v-bind:value="barcodeValue" v-bind:format="format">
+      <barcode v-bind:value="this.$store.state.check.goodsNumber" v-bind:format="format">
       </barcode>
-      <div v-on:click="generateBar">바코드 생성</div>
       <input type="text" v-model="userName">
       <input type="text" v-model="phoneNumber">
       <input type="text" v-model="goodsNumber">
@@ -11,7 +10,6 @@
         사용자 확인
       </div>
       
-      <p class="result">굿</p>
   </div>
 </template>
 
@@ -24,7 +22,6 @@ export default {
   },
  data() {
    return {
-     barcodeValue: '',
      format : 'CODE128',
      userName : 'lsh',
      phoneNumber : '1',
@@ -33,7 +30,6 @@ export default {
  },
  methods: {
    checkUser() {
-     this.barcodeValue = '';
      const user = {
         userName : this.userName,
         phoneNumber : this.phoneNumber,
@@ -42,14 +38,7 @@ export default {
      this.$store.dispatch('GET_CHECK',user);
     
    },
-   generateBar(){
-    if(this.$store.state.check.auth == true){
-      this.barcodeValue = this.$store.state.check.goodsNumber;
-      console.log('여기야');
-     }else{
-       this.barcodeValue = '';
-     }
-   }
+   
  },
 }
 </script>
