@@ -1,10 +1,8 @@
 <template>
-  <div class="wrapAll">
+  <div>
     <p class="error">{{ error }}</p>
-
-    <div class="scanSec">
-      <qrcode-stream @decode="onDecode" @init="onInit" />
-    </div>
+    
+    <qrcode-stream @decode="onDecode" @init="onInit" />
     <p class="decode-result">QR정보: <b>{{ result }}</b></p>
   </div>
 </template>
@@ -61,6 +59,4 @@ export default {
   color: red;
 }
 
-.wrapAll {width: 60%; height: 600px; background-color: #FF6A6A; color: #fff; margin: 0 auto;}
-.wrapAll .scanSec {width: 40%; margin: 0 auto;}
 </style>

@@ -1,18 +1,62 @@
 <template>
-    <div>
-        <Qr></Qr>
+    <div class="cam">
+        <router-link to="/admin"> 뒤로가기 </router-link>
+        <p class="error">{{ error }}</p>
+        <p class="decode-result">QR정보: <b>{{ result }}</b></p>
+        <qrcode-stream @decode="onDecode" @init="onInit" />
     </div>    
 </template>
 
 <script>
-import Qr from '../test/Qr.vue'
+
+import { QrcodeStream } from 'vue-qrcode-reader'
 
 export default {
-    components: { Qr },
 
+components: { QrcodeStream },
+
+data () {
+    return {
+    result: '',
+    error: ''
+    }
+},
+
+methods: {
+    onDecode (result) {
+    this.result = result
+    },
+
+    async onInit (promise) {
+        try {
+            await promise
+        } catch (error) {
+            if (error.name === 'NotAllowedError') {
+                this.error = "ERROR: you need to grant camera access permission"
+            } else if (error.name === 'NotFoundError') {
+                this.error = "ERROR: no camera on this device"
+            } else if (error.name === 'NotSupportedError') {
+                this.error = "ERROR: secure context required (HTTPS, localhost)"
+            } else if (error.name === 'NotReadableError') {
+                this.error = "ERROR: is the camera already in use?"
+            } else if (error.name === 'OverconstrainedError') {
+                this.error = "ERROR: installed cameras are not suitable"
+            } else if (error.name === 'StreamApiNotSupportedError') {
+                this.error = "ERROR: Stream API is not supported in this browser"
+            } else if (error.name === 'InsecureContextError') {
+                this.error = 'ERROR: Camera access is only permitted in secure context. Use HTTPS or localhost rather than HTTP.';
+            } else {
+                this.error = `ERROR: Camera error (${error.name})`;
+            }
+        }
+    }
+    }
 }
 </script>
 
-<style>
+<style scoped>
+    .cam {width: 100%; height: 100%;}
+    .cam .error {color: red; font-weight: 600; }
+    .cam a {color: #fff; font-weight: 600;}
 
 </style>
