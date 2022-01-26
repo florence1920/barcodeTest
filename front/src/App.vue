@@ -5,7 +5,8 @@
       <router-link to="/test">Test Home</router-link> |
       <router-link to="/test/generate">Barcode Gen</router-link> |
       <router-link to="/test/qrgenerate">QR Gen</router-link> |
-      <router-link to="/test/reader">QR Reader</router-link>
+      <router-link to="/test/reader">QR Reader</router-link> |
+      <router-link to="/qrShow">QR Show</router-link>
     </div>
     <div class="routerWrap">
       <router-view/>
@@ -23,16 +24,16 @@
 }
 
 #nav {
-  padding: 30px;
+  padding: 30px; background-color: #FF6A6A;
 }
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #fff;
 }
 
 #nav a.router-link-exact-active {
   color: #42b983;
 }
-.routerWrap {padding: 30px;}
+.routerWrap { background-color: #fff; padding: 30px;}
 </style>
