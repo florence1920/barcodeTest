@@ -8,7 +8,7 @@
     data() {
       return {
         value: 'hi',
-        size: 500,
+        size: 300,
       }
     },
     components: {

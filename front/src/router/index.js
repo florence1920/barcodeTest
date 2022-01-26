@@ -5,7 +5,9 @@ import Home from '../views/test/Home.vue'
 import Generate from '../views/test/Generate.vue'
 import QrGenerator from '../views/test/QrGenerator.vue'
 import QrReader from '../views/test/QrReader.vue'
-
+import QrShowView from '../views/user/QrShowView.vue'
+import QrScannerView from '../views/QrScannerView.vue'
+import AdminView from '../views/admin/AdminView.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -33,6 +35,21 @@ const routes = [
     path: '/test/reader',
     name: 'QrReader',
     component: QrReader
+  },
+  {
+    path: '/qrshow',
+    name: 'QrShowView',
+    component: QrShowView
+  },
+  {
+    path: '/qrscanner',
+    name: 'QrScannerView',
+    component: QrScannerView
+  },
+  {
+    path: '/admin',
+    name: 'AdminView',
+    component: AdminView
   },
 ]
 
