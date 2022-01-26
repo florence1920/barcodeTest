@@ -1,7 +1,7 @@
 <template>
-<div>
-    <qr-show></qr-show>
-</div>
+    <div>
+        <qr-show></qr-show>
+    </div>
 </template>
 
 <script>
