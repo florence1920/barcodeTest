@@ -1,8 +1,9 @@
 <template>
-    <div>
-        관리자 메인 페이지
+<div class="wrapAll">
+    <div class="dashboard">
         
     </div>
+</div>
 </template>
 
 <script>
