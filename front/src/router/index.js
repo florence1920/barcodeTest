@@ -64,7 +64,7 @@ const routes = [
     component: QrScanner
   },
   {
-    path: '/admin/storeInfo',
+    path: '/admin/storeinfo',
     name: 'StoreInfoView',
     component: StoreInfoView
   },
