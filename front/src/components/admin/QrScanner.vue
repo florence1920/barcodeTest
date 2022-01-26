@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Qr from './test/Qr.vue'
+import Qr from '../test/Qr.vue'
 
 export default {
     components: { Qr },

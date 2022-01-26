@@ -6,7 +6,7 @@ import Generate from '../views/test/Generate.vue'
 import QrGenerator from '../views/test/QrGenerator.vue'
 import QrReader from '../views/test/QrReader.vue'
 import QrShowView from '../views/user/QrShowView.vue'
-import QrScannerView from '../views/QrScannerView.vue'
+import QrScannerView from '../views/admin/QrScannerView.vue'
 import AdminView from '../views/admin/AdminView.vue'
 Vue.use(VueRouter)
 

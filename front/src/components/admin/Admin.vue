@@ -1,14 +1,13 @@
 <template>
     <div>
-        관리자페이지
-        <qr></qr>
+        관리자 메인 페이지
+        
     </div>
 </template>
 
 <script>
-import Qr from '../test/Qr.vue'
+
 export default {
-    components: { Qr },
 
 }
 </script>
