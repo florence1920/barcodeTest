@@ -8,7 +8,9 @@ import QrReader from '../views/test/QrReader.vue'
 import QrShowView from '../views/user/QrShowView.vue'
 
 import AdminView from '../views/admin/AdminView.vue'
+import QrScanner from '../views/admin/QrScannerView.vue'
 import PurchaseView from '../views/user/PurchaseView.vue'
+import StoreInfoView from '../views/admin/StoreInfoView.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -56,6 +58,17 @@ const routes = [
     name: 'AdminView',
     component: AdminView
   },
+  {
+    path: '/admin/qrscanner',
+    name: 'QrScanner',
+    component: QrScanner
+  },
+  {
+    path: '/admin/storeInfo',
+    name: 'StoreInfoView',
+    component: StoreInfoView
+  },
+
 ]
 
 const router = new VueRouter({

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">MainPage</router-link> |
       <router-link to="/test">Test Home</router-link> |
       <router-link to="/test/generate">Barcode Gen</router-link> |
@@ -8,9 +8,11 @@
       <router-link to="/test/reader">QR Reader</router-link> |
       <router-link to="/qrShow">QR Show</router-link> |
       <router-link to="/user/purchase">TourPass 구매</router-link> |
-    </div>
+    </div> -->
     <div class="routerWrap">
-      <router-view/>
+      <div class="wrapAll">
+        <router-view/>
+      </div>
     </div>
   </div>
 </template>
@@ -24,17 +26,7 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px; background-color: #FF6A6A;
-}
+.routerWrap {width: 800px; height: 900px; background-color: #222; border-radius: 10px; margin: 0 auto;}
+.routerWrap .wrapAll {color: #fff;}
 
-#nav a {
-  font-weight: bold;
-  color: #fff;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-.routerWrap { background-color: #fff; padding: 30px;}
 </style>
