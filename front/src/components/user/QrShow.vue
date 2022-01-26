@@ -12,13 +12,13 @@
             <!-- //timer end -->
             <div class="qrSec">
                 <qr-gen></qr-gen>
-                <p class="num">2022012611111</p>
+                <p class="num">{{this.$store.state.user.goods}}</p>
             </div>
             <!-- // qrSec end -->
 
             <div class="userInfo">
-                <p class="name">구매자 이름 : 이승헌</p>
-                <p class="phoneNum">휴대폰번호 : 01011114444</p>
+                <p class="name">구매자 이름 : {{this.$store.state.user.userName}}</p>
+                <p class="phoneNum">휴대폰번호 : {{this.$store.state.user.phone}}</p>
             </div>
             <!-- // userInfo end -->
         </div>
