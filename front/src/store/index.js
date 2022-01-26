@@ -32,7 +32,8 @@ export default new Vuex.Store({
       const response = await getCheck(user);
       console.log(response);
       context.commit('SET_CHECK',response.data);
-    }
+    },
+    async G
   },
   modules: {
   }

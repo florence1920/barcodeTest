@@ -6,7 +6,8 @@
       <router-link to="/test/generate">Barcode Gen</router-link> |
       <router-link to="/test/qrgenerate">QR Gen</router-link> |
       <router-link to="/test/reader">QR Reader</router-link> |
-      <router-link to="/qrShow">QR Show</router-link>
+      <router-link to="/qrShow">QR Show</router-link> |
+      <router-link to="/user/purchase">TourPass 구매</router-link> |
     </div>
     <div class="routerWrap">
       <router-view/>
