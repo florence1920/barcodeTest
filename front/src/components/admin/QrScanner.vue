@@ -3,7 +3,10 @@
         <router-link to="/admin"> 뒤로가기 </router-link>
         <p class="error">{{ error }}</p>
         <p class="decode-result">QR정보: <b>{{ result }}</b></p>
-        <qrcode-stream @decode="onDecode" @init="onInit" />
+        <div class="blur">
+            <div class="dark"></div>
+            <qrcode-stream @decode="onDecode" @init="onInit" class="scanner" />
+        </div>
     </div>    
 </template>
 
@@ -58,5 +61,7 @@ methods: {
     .cam {width: 100%; height: 100%;}
     .cam .error {color: red; font-weight: 600; }
     .cam a {color: #fff; font-weight: 600;}
+    .cam .blur {filter: blur();}
+    .cam .blur .scanner {width: 100%; height: 770px;}
 
 </style>
