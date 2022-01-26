@@ -14,8 +14,8 @@ export default {
             url: `http://localhost:8080/qrshow`,
             user : {
                 userName : 'lsh',
-                phoneNumber : 01097647537,
-                goodsNumber : 2022012612345678
+                phoneNumber : '01097647537',
+                goodsNumber : '2022012612345678'
             }
         }
     },
