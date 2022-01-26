@@ -33,7 +33,7 @@ export default new Vuex.Store({
       console.log(response);
       context.commit('SET_CHECK',response.data);
     },
-    async G
+    
   },
   modules: {
   }
