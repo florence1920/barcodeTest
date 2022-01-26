@@ -1,5 +1,6 @@
 <template>
     <div>
+        관리자View 메인 페이지
         <admin></admin>
     </div>
 </template>
