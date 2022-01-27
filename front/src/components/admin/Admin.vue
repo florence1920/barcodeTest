@@ -1,16 +1,36 @@
 <template>
-<div class="wrapAll">
-<div class="top">
-    <p class="tit">기린아 매장님 좋은 하루 되세요.</p>
-</div>
-<ul class="menu">
-    <li><router-link to="/admin/storeinfo"> 매장 정보 </router-link></li>
-    <li><router-link to='/admin/qrscanner'> QR 스캐너 </router-link></li>
-    <li><router-link to="/admin/salesinfo"> 히스토리 </router-link></li>
-    <li><router-link to=""> 업데이트 예정 </router-link></li>
-    
-</ul>
-</div>
+    <div class="adminMainWrap">
+        <p class="tit sign">로그아웃</p>
+        
+        <ul class="menuWrap">
+            <li>
+                <p class="tit store">강릉 투어패스 <span class="b"> 금송아지 </span> </p>
+            </li>
+            <li class="box scBox">
+                <router-link to='/admin/qrscanner'>
+                    <p class="sub">QR Scanner</p>
+                    <p class="arrow">＞</p>
+                </router-link>
+            </li>
+            <li class="box">
+                <p class="tit menuTit">패스 이용자 수</p>
+                <p class="count">172명</p>
+                <div class="userCount">
+                    <p class="more">자세히 보기</p>
+                    <p class="arrow">＞</p>
+                </div>
+            </li>
+            <li class="box chartBox">
+                <p class="tit menuTit">패스 이용자 추세</p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 </template>
 
 <script>
@@ -21,9 +41,20 @@ export default {
 </script>
 
 <style scoped>
-    .wrapAll .top {margin: 0 20px ;}
-    .wrapAll .top .tit {font-size: 20px;}
-    .wrapAll .menu {overflow: hidden; width: 100%; margin: 30px 0 0;}
-    .wrapAll .menu li {float: left; width: 40%; height: 100px; background-color: #3b579d; text-align: center; margin: 50px 20px 20px;}
-    .wrapAll .menu li a {width: 100%; height: 100%; line-height: 100px; color: #fff; font-weight: 600;}
+    .tit {font-size: 15px;}
+    .count {margin: 0 0 25px 0; font-size: 25px; font-weight:900;}
+    .sub {font-size:30px;}
+    .more {float: left; font-size: 20px; font-weight: bold;}
+    .menuTit {margin:0 0 25px 0; font-weight:300; color: #828282;}
+    .sign {float: right;}
+    .b {font-weight: 900;}
+    .menuWrap {float: left; margin: 40px 0 0; width: 100%;}
+    .menuWrap .box {width: 100%; height: 180px; margin: 0 0 40px 0;  padding: 20px 4%;  border-radius: 5px; background: rgb(253, 253, 253); box-shadow: 0 2px 5px rgba(0, 0, 0, .33);}
+    .menuWrap li:nth-child(1) {margin:0 0 20px;}
+    .menuWrap .scBox {overflow: hidden; height: 75px; padding: 0 4%; line-height: 75px; background: #3B579D; color:#fff; box-shadow: none;}
+    .menuWrap .scBox a {color:#fff;}
+    .menuWrap .sub {float: left; }
+    .menuWrap .arrow {float: right;}
+    .menuWrap .userCount {padding:25px 0 0; height: 20px; line-height: 20px; border-top: 1px solid rgb(207, 207, 207);}
+    .menuWrap .chartBox {height: 300px;}
 </style>

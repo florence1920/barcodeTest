@@ -18,17 +18,23 @@
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
 @import './assets/css/reset.css';
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: calc((100vh - 900px)/2) 0;
   min-height: 100vh;
-  background-color: rgb(145, 145, 145);
+  background-color: rgb(214, 214, 214);
   color: #2c3e50;
+  
 }
 
-.routerWrap {width: 440px; height: 700px; background-color: #fff; border-radius: 30px; margin: 0 auto;}
-.routerWrap .wrapAll {color: #000; margin: 0 auto;}
+
+.routerWrap {width: 440px; height: 900px; background-color: #fff; border-radius: 30px; padding: 50px 0; margin: 0 auto; }
+.routerWrap .wrapAll {color: #000; }
+.wrapAdmin {padding: 1% 10%;}
 
 </style>
