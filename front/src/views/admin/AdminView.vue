@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapAll">
+    <div class="wrapAdmin">
         <admin></admin>
     </div>
 </template>
