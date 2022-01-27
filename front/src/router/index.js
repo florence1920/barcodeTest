@@ -11,6 +11,8 @@ import AdminView from '../views/admin/AdminView.vue'
 import QrScanner from '../views/admin/QrScannerView.vue'
 import PurchaseView from '../views/user/PurchaseView.vue'
 import StoreInfoView from '../views/admin/StoreInfoView.vue'
+import SalesInfoView from '../views/admin/SalesInfoView.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -67,6 +69,11 @@ const routes = [
     path: '/admin/storeinfo',
     name: 'StoreInfoView',
     component: StoreInfoView
+  },
+  {
+    path: '/admin/salesinfo',
+    name: 'SalesInfoView',
+    component: SalesInfoView
   },
 
 ]
