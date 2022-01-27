@@ -1,6 +1,5 @@
 <template>
-    <div>
-        관리자View 메인 페이지
+    <div class="wrapAll">
         <admin></admin>
     </div>
 </template>
@@ -13,6 +12,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

@@ -11,10 +11,10 @@ export default new Vuex.Store({
       auth : false,
       goodsNumber:''
     },
-    user : {
-      userName : 'lsh',
-      phoneNumber : '01097647537',
-      goodsNumber : '2022012612345678'
+    user:{
+      userName:'이승헌',
+      phone : '01097647537',
+      goods: '2022012612345678'
     }
   },
   mutations: {
