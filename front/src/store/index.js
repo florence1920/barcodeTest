@@ -11,6 +11,11 @@ export default new Vuex.Store({
       auth : false,
       goodsNumber:''
     },
+    user : {
+      userName : 'lsh',
+      phoneNumber : '01097647537',
+      goodsNumber : '2022012612345678'
+    }
   },
   mutations: {
     SET_AXIOS(state, response){
