@@ -28,7 +28,7 @@
   color: #2c3e50;
 }
 
-.routerWrap {width: 440px; height: 900px; background-color: #fff; border-radius: 30px; padding: 50px 0; margin: 0 auto;}
-.routerWrap .wrapAll {color: #000; }
+.routerWrap {width: 440px; height: 700px; background-color: #fff; border-radius: 30px; margin: 0 auto;}
+.routerWrap .wrapAll {color: #000; margin: 0 auto;}
 
 </style>
