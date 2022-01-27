@@ -7,7 +7,7 @@
   export default {
     data() {
       return {
-        value: 'hi',
+        value: this.$store.state.user.goods,
         size: 300,
       }
     },
