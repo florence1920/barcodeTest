@@ -1,6 +1,7 @@
 <template>
 <div>
-    매장 정보 관리 페이지
+    <router-link to="/admin"> 뒤로가기 </router-link>
+    <p>매장 관리 페이지</p>
 </div>
 </template>
 
@@ -10,6 +11,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+a {color: #fff;}
 
 </style>

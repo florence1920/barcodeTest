@@ -23,10 +23,12 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background-color: rgb(145, 145, 145);
   color: #2c3e50;
 }
 
-.routerWrap {width: 800px; height: 900px; background-color: #222; border-radius: 10px; margin: 0 auto;}
-.routerWrap .wrapAll {color: #fff;}
+.routerWrap {width: 440px; height: 900px; background-color: #fff; border-radius: 30px; padding: 50px 0; margin: 0 auto;}
+.routerWrap .wrapAll {color: #000; }
 
 </style>

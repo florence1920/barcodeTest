@@ -13,5 +13,5 @@ export default {
 </script>
 
 <style scoped>
-    .wrapAll {padding: 50px 50px;}
+
 </style>
