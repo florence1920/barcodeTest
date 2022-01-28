@@ -13,8 +13,10 @@
             <!-- // 화면  -->
         </div>
             <router-link to="/admin" class="back"><img src="../../assets/icon/back.png" alt="" width="100%"></router-link>
-        <p class="decode-result">QR정보:  <b>{{ result }}</b></p>
         <!-- //결과 정보 -->
+        <div class="infoBox" v-if="result">
+            <p class="decode-result">QR정보:  <b>{{ result }}</b></p>
+        </div>
     </div>    
 </template>
 
@@ -28,14 +30,17 @@ components: { QrcodeStream },
 
 data () {
     return {
-    result: '',
-    error: ''
+        result: '',
+        error: ''
     }
 },
 
 methods: {
     onDecode (result) {
     this.result = result
+    setTimeout(() => {
+        this.result = '';
+    }, 1000);
     },
 
     async onInit (promise) {
@@ -66,6 +71,7 @@ methods: {
 </script>
 
 <style scoped>
+
     .scannerWrap {width: 100%; height: 900px;}
     .scannerWrap .qrSec {overflow: hidden; width: 100%; height: 100%; border-radius: 30px; position: relative;}
     .scannerWrap .qrSec .blur {overflow: hidden; position: absolute;top: 0;left: 0; width: 100%; height: 100%; z-index: 1;}
@@ -77,19 +83,9 @@ methods: {
     .scannerWrap .qrSec .blur > li:nth-child(5) {width: 100%; height: 30%;background-color: rgba(0,0,0,.5);}
     .scannerWrap .qrSec .scanner {float: left;}
     .scannerWrap .back {position: absolute;top: 20px;left: 0; width: 40px; height: 40px; background-color: #aaa; border-radius: 30px; padding: 5px; z-index: 2;}
+   .infoBox {width: 250px; height: 100px; background: rgb(84, 81, 250); border-radius: 10px; position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index:2;}
 
 
 
 
-    /* .scannerWrap .qrSec .barrier.hor1 {position: absolute;top: 0;left: 0; width: 100%; height: 400px; background-color: rgba(0,0,0,.5); z-index: 1;}
-    .scannerWrap .qrSec .barrier.hor2 {position: absolute;bottom: 0;left: 0; width: 100%; height: 400px; background-color: rgba(0,0,0,.5); z-index: 1;}
-    .scannerWrap .qrSec .barrier.v1 {position: absolute;top: 300px;left: 0; width: 100px; height: 300px; background-color: rgba(0,0,0,.5); z-index: 1;}
-    .scannerWrap .qrSec .barrier.v2 {position: absolute;top: 300px;right: 0; width: 100px; height: 300px; background-color: rgba(0,0,0,.5); z-index: 1;} */
-
-    /* .scannerWrap {width: 100%; height: 100%; position: relative;}
-    .scannerWrap .error {color: red; font-weight: 600;}
-    .scannerWrap a {color: #fff; font-weight: 600;}
-    .scannerWrap .qrSec {border-radius: 30px;}
-    .scannerWrap .barrier.b1 {width: 100%; height: 50px;}
-    .scannerWrap .scanner {width: 100%; height: 900px;} */
 </style>
