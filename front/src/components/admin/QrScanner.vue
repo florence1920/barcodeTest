@@ -10,8 +10,10 @@
             <!-- // 화면  -->
         </div>
             <router-link to="/admin" class="back"><img src="../../assets/icon/back.png" alt="" width="100%"></router-link>
-        <p class="decode-result">QR정보:  <b>{{ result }}</b></p>
         <!-- //결과 정보 -->
+        <div class="infoBox" v-if="result">
+            <p class="decode-result">QR정보:  <b>{{ result }}</b></p>
+        </div>
     </div>    
 </template>
 
@@ -25,14 +27,17 @@ components: { QrcodeStream },
 
 data () {
     return {
-    result: '',
-    error: ''
+        result: '',
+        error: ''
     }
 },
 
 methods: {
     onDecode (result) {
     this.result = result
+    setTimeout(() => {
+        this.result = '';
+    }, 1000);
     },
 
     async onInit (promise) {
@@ -75,4 +80,5 @@ methods: {
     .cam .barrier.v2 {position: absolute;top: 200px;right: 0; width: 100px; height: 316px; background-color: rgba(0,0,0,.5); z-index: 1;}
     /* .cam .barrier.b1 {width: 100%; height: 50px;} */
     .cam .scanner {width: 100%; height: 700px;}
+    .infoBox {width: 250px; height: 100px; background: rgb(84, 81, 250); border-radius: 10px; position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index:2;}
 </style>
