@@ -36,7 +36,7 @@ export default {
 </script>
 
 <style scoped>
-    .wrapAll .qrWrap {overflow: hidden; width: 100%; height: 700px; text-align: center; background-color: #3b579d; color: #fff; font-weight: 600; border-radius: 30px; padding: 50px 10px;}
+    .wrapAll .qrWrap {overflow: hidden; width: 100%; height: 900px; text-align: center; background-color: #3b579d; color: #fff; font-weight: 600; border-radius: 30px; padding: 50px 10px;}
 
     .wrapAll .qrWrap .timerSec {margin: 0 0 20px 0;}
     .wrapAll .qrWrap .timerSec > p {margin: 10px 0;}
@@ -48,8 +48,8 @@ export default {
     .wrapAll .qrWrap .userInfo .qrSec {width: 65%; height: auto; border: 3px solid #3b579d; border-radius: 10px; padding: 5px 0; margin: 0 auto;}
     .wrapAll .qrWrap .userInfo p {color: #000;}
     .wrapAll .qrWrap .userInfo .tit {margin: 20px 0;}
-    .wrapAll .qrWrap .userInfo .box {width: 90%; height: auto; background-color: rgb(238,234,234); border: 2px solid #3b579d;opacity: .5; padding: 10px 0; margin: 0 20px auto;}
-    .wrapAll .qrWrap .userInfo .box p {color: #3b579d; font-weight: 600;}
+    .wrapAll .qrWrap .userInfo .box {width: 90%; height: auto;border: 2px solid #3b579d; padding: 10px 0; margin: 0 20px auto;}
+    /* .wrapAll .qrWrap .userInfo .box p {color: #3b579d; font-weight: 600;} */
 
     .wrapAll .qrWrap .userInfo .info {margin: 20px 0 0;}
     .wrapAll .qrWrap .userInfo .info > p {margin: 5px 0 0 0;}

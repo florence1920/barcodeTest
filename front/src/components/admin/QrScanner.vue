@@ -1,11 +1,14 @@
 <template>
-    <div class="cam">
+    <div class="scannerWrap">
         <p class="error">{{ error }}</p>
         <div class="qrSec">
-            <div class="barrier hor hor1"></div>
-            <div class="barrier ver v1"></div>
-            <div class="barrier hor hor2"></div>
-            <div class="barrier ver v2"></div>
+            <ul class="blur">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
             <qrcode-stream @decode="onDecode" @init="onInit" class="scanner" />
             <!-- // 화면  -->
         </div>
@@ -68,17 +71,21 @@ methods: {
 </script>
 
 <style scoped>
-    .cam {width: 100%; height: 100%; position: relative;}
-    .cam .error {color: red; font-weight: 600;}
-    p {color: #000;}
-    .cam a {color: #fff; font-weight: 600;}
-    .cam .back {position: absolute;top: 20px;left: 0; width: 40px; height: 40px; background-color: #aaa; border-radius: 30px; padding: 5px; z-index: 2;}
-    .cam .qrSec {border-radius: 30px;}
-    .cam .barrier.hor1 {position: absolute;top: 0;left: 0; width: 100%; height: 200px; background-color: rgba(0,0,0,.5); z-index: 1;}
-    .cam .barrier.hor2 {position: absolute;bottom: 0;left: 0; width: 100%; height: 200px; background-color: rgba(0,0,0,.5); z-index: 1;}
-    .cam .barrier.v1 {position: absolute;top: 200px;left: 0; width: 100px; height: 316px; background-color: rgba(0,0,0,.5); z-index: 1;}
-    .cam .barrier.v2 {position: absolute;top: 200px;right: 0; width: 100px; height: 316px; background-color: rgba(0,0,0,.5); z-index: 1;}
-    /* .cam .barrier.b1 {width: 100%; height: 50px;} */
-    .cam .scanner {width: 100%; height: 700px;}
-    .infoBox {width: 250px; height: 100px; background: rgb(84, 81, 250); border-radius: 10px; position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index:2;}
+
+    .scannerWrap {width: 100%; height: 900px;}
+    .scannerWrap .qrSec {overflow: hidden; width: 100%; height: 100%; border-radius: 30px; position: relative;}
+    .scannerWrap .qrSec .blur {overflow: hidden; position: absolute;top: 0;left: 0; width: 100%; height: 100%; z-index: 1;}
+    .scannerWrap .qrSec .blur > li {float: left; }
+    .scannerWrap .qrSec .blur > li:nth-child(1) {width: 100%; height: 30%; background-color: rgba(0,0,0,.5);}
+    .scannerWrap .qrSec .blur > li:nth-child(2) {width: 20%; height: 40%;background-color: rgba(0,0,0,.5); }
+    .scannerWrap .qrSec .blur > li:nth-child(3) {width: 60%; height: 40%; border:3px #dee756 dashed; padding: 10px;}
+    .scannerWrap .qrSec .blur > li:nth-child(4) {width: 20%; height: 40%;background-color: rgba(0,0,0,.5);}
+    .scannerWrap .qrSec .blur > li:nth-child(5) {width: 100%; height: 30%;background-color: rgba(0,0,0,.5);}
+    .scannerWrap .qrSec .scanner {float: left;}
+    .scannerWrap .back {position: absolute;top: 20px;left: 0; width: 40px; height: 40px; background-color: #aaa; border-radius: 30px; padding: 5px; z-index: 2;}
+   .infoBox {width: 250px; height: 100px; background: rgb(84, 81, 250); border-radius: 10px; position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index:2;}
+
+
+
+
 </style>
