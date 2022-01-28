@@ -15,7 +15,7 @@ export default new Vuex.Store({
       userName:'이승헌',
       phone : '01097647537',
       goods: '2022012612345678',
-      gender: 'male',
+      headCount: '성인 2명',
     }
   },
   mutations: {

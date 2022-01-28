@@ -9,7 +9,11 @@
                 <li></li>
                 <li></li>
             </ul>
-            <qrcode-stream @decode="onDecode" @init="onInit" class="scanner" />
+            <qrcode-stream @decode="onDecode" @init="onInit" class="scanner">
+                <div class="loading-indicator" v-if="loading">
+                    Loading...
+                </div>
+            </qrcode-stream>
             <!-- // 화면  -->
         </div>
             <router-link to="/admin" class="back"><img src="../../assets/icon/back.png" alt="" width="100%"></router-link>
@@ -31,7 +35,8 @@ components: { QrcodeStream },
 data () {
     return {
         result: '',
-        error: ''
+        error: '',
+        loading: false,
     }
 },
 
@@ -44,6 +49,7 @@ methods: {
     },
 
     async onInit (promise) {
+        this.loading = true
         try {
             await promise
         } catch (error) {
@@ -64,6 +70,8 @@ methods: {
             } else {
                 this.error = `ERROR: Camera error (${error.name})`;
             }
+        } finally {
+             this.loading = false;
         }
     }
     }
@@ -82,8 +90,9 @@ methods: {
     .scannerWrap .qrSec .blur > li:nth-child(4) {width: 20%; height: 40%;background-color: rgba(0,0,0,.5);}
     .scannerWrap .qrSec .blur > li:nth-child(5) {width: 100%; height: 30%;background-color: rgba(0,0,0,.5);}
     .scannerWrap .qrSec .scanner {float: left;}
-    .scannerWrap .back {position: absolute;top: 20px;left: 0; width: 40px; height: 40px; background-color: #aaa; border-radius: 30px; padding: 5px; z-index: 2;}
+    .scannerWrap .back {position: absolute;top: 20px;left: 0; width: 40px; height: 40px; background-color: rgb(0, 0, 0, .3); border-radius: 30px; padding: 5px; z-index: 2;}
    .infoBox {width: 250px; height: 100px; background: rgb(84, 81, 250); border-radius: 10px; position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index:2;}
+   .loading-indicator {line-height: 900px; font-size: 30px; font-weight: bold; text-align: center; color: black; }
 
 
 
