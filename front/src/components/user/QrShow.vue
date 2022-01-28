@@ -15,7 +15,7 @@
             </div>
             <p class="tit">[강릉투어패스] 강릉투어패스 48시간 프리패스</p>
             <div class="box">
-                <p>성인 : 1명</p>
+                <p>{{this.$store.state.user.headCount}}</p>
             </div>
             <div class="info">
                 <p class="name">구매자 이름 : {{this.$store.state.user.userName}}</p>
