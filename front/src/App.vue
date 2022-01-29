@@ -33,8 +33,7 @@
 }
 
 
-.routerWrap {width: 440px; height: 900px; background-color: #fff; border-radius: 30px; padding: 0 0; margin: 0 auto; }
-.routerWrap .wrapAll {color: #000;}
-.wrapAdmin {padding: 1% 10%;}
+.routerWrap {width: 440px; height: 900px; background-color: #fff; border-radius: 30px; margin: 0 auto;}
+.routerWrap .wrapAll {width: 100%; height: 100%; color: #000; margin: 0 auto;}
 
 </style>

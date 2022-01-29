@@ -47,7 +47,9 @@ export default {
     .menuTit {margin:0 0 25px 0; font-weight:300; color: #828282;}
     .sign {float: right;}
     .b {font-weight: 900;}
-    .menuWrap {float: left; margin: 80px 0 0; width: 100%;}
+
+    .adminMainWrap {padding: 10px 20px;}
+    .menuWrap {float: left; width: 100%; margin: 80px 0 0;}
     .menuWrap .box {width: 100%; height: 180px; margin: 0 0 40px 0;  padding: 20px 4%;  border-radius: 10px; background: rgb(253, 253, 253); box-shadow: 0 2px 5px rgba(0, 0, 0, .33);}
     .menuWrap li:nth-child(1) {margin:0 0 20px;}
     .menuWrap .scBox {overflow: hidden; height: 75px; padding: 0 4%; line-height: 75px; background: #3B579D; color:#fff; box-shadow: none;}
