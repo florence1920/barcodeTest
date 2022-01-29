@@ -1,6 +1,7 @@
 <template>
     <div class="scannerWrap">
         <p class="error">{{ error }}</p>
+        <router-link to="/admin" class="back"><img src="../../assets/icon/back.png" alt="" width="100%"></router-link>
         <div class="qrSec">
             <ul class="blur">
                 <li></li>
@@ -16,10 +17,10 @@
             </qrcode-stream>
             <!-- // 화면  -->
         </div>
-            <router-link to="/admin" class="back"><img src="../../assets/icon/back.png" alt="" width="100%"></router-link>
         <!-- //결과 정보 -->
         <div class="infoBox" v-if="result">
-            <p class="decode-result">QR정보:  <b>{{ result }}</b></p>
+            <p class="decode-result">패스번호:  <b>{{ result }}</b></p>
+            <p>강릉투어패스 {{ this.$store.state.user.headCount }}</p>
         </div>
     </div>    
 </template>
@@ -45,7 +46,7 @@ methods: {
     this.result = result
     setTimeout(() => {
         this.result = '';
-    }, 1000);
+    }, 3000);
     },
 
     async onInit (promise) {
@@ -71,7 +72,7 @@ methods: {
                 this.error = `ERROR: Camera error (${error.name})`;
             }
         } finally {
-             this.loading = false;
+            this.loading = false;
         }
     }
     }
@@ -81,6 +82,8 @@ methods: {
 <style scoped>
 
     .scannerWrap {width: 100%; height: 900px;}
+    .scannerWrap .back {position: absolute;top: 40px;left: 20px; width: 40px; height: 40px; background-color: rgb(0, 0, 0, .3); border-radius: 30px; padding: 5px; z-index: 2;}
+
     .scannerWrap .qrSec {overflow: hidden; width: 100%; height: 100%; border-radius: 30px; position: relative;}
     .scannerWrap .qrSec .blur {overflow: hidden; position: absolute;top: 0;left: 0; width: 100%; height: 100%; z-index: 1;}
     .scannerWrap .qrSec .blur > li {float: left; }
@@ -89,11 +92,11 @@ methods: {
     .scannerWrap .qrSec .blur > li:nth-child(3) {width: 60%; height: 40%; border:3px #dee756 dashed; padding: 10px;}
     .scannerWrap .qrSec .blur > li:nth-child(4) {width: 20%; height: 40%;background-color: rgba(0,0,0,.5);}
     .scannerWrap .qrSec .blur > li:nth-child(5) {width: 100%; height: 30%;background-color: rgba(0,0,0,.5);}
-    .scannerWrap .qrSec .scanner {float: left;}
-    .scannerWrap .back {position: absolute;top: 20px;left: 0; width: 40px; height: 40px; background-color: rgb(0, 0, 0, .3); border-radius: 30px; padding: 5px; z-index: 2;}
-   .infoBox {width: 250px; height: 100px; background: rgb(84, 81, 250); border-radius: 10px; position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index:2;}
-   .loading-indicator {line-height: 900px; font-size: 30px; font-weight: bold; text-align: center; color: black; }
+    .scannerWrap .qrSec .scanner {}
 
+    .scannerWrap .infoBox {width: 250px; height: 100px; background: #dee756; border-radius: 10px; position: absolute; top: 100px; left: 50%; transform: translateX(-50%); z-index:2;}
+    .scannerWrap .infoBox p {font-weight: 600; text-align: center; color: #000; margin: 20px 0 0;}
+    .loading-indicator {line-height: 900px; font-size: 30px; font-weight: 600; text-align: center; color: black; }
 
 
 

@@ -9,6 +9,7 @@
   "dependencies": {
     "axios": "^0.25.0",
     "bwip-js": "^3.0.4",
+    "chart.js": "^3.7.0",
     "qrcode.vue": "^1.7.0",
     "vue": "^2.6.11",
     "vue-barcode": "^1.3.0",

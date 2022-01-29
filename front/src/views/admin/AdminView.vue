@@ -1,7 +1,5 @@
 <template>
-    <div class="wrapAdmin">
-        <admin></admin>
-    </div>
+    <admin></admin>
 </template>
 
 <script>
