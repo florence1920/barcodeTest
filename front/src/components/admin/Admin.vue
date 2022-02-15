@@ -13,7 +13,7 @@
             </router-link>
             <li class="box">
                 <p class="tit menuTit">패스 이용자 수</p>
-                <p class="count">172명</p>
+                <p class="count">173명</p>
                 <div class="userCount">
                     <p class="more">자세히 보기</p>
                     <p class="arrow">＞</p>
