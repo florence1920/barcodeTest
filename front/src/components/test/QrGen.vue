@@ -8,7 +8,7 @@
     data() {
       return {
         value: this.$store.state.user.goods,
-        size: 300,
+        size : 200,
       }
     },
     components: {

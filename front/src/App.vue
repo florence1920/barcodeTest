@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">MainPage</router-link> |
       <router-link to="/test">Test Home</router-link> |
       <router-link to="/test/generate">Barcode Gen</router-link> |
@@ -8,33 +8,32 @@
       <router-link to="/test/reader">QR Reader</router-link> |
       <router-link to="/qrShow">QR Show</router-link> |
       <router-link to="/user/purchase">TourPass 구매</router-link> |
-    </div>
+    </div> -->
     <div class="routerWrap">
-      <router-view/>
+      <div class="wrapAll">
+        <router-view/>
+      </div>
     </div>
   </div>
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
 @import './assets/css/reset.css';
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: calc((100vh - 900px)/2) 0;
+  min-height: 100vh;
+  background-color: rgb(214, 214, 214);
   color: #2c3e50;
+  
 }
 
-#nav {
-  padding: 30px; background-color: #FF6A6A;
-}
 
-#nav a {
-  font-weight: bold;
-  color: #fff;
-}
+.routerWrap {width: 440px; height: 900px; background-color: #fff; border-radius: 30px; margin: 0 auto;}
+.routerWrap .wrapAll {width: 100%; height: 100%; color: #000; margin: 0 auto;}
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-.routerWrap { background-color: #fff; padding: 30px;}
 </style>

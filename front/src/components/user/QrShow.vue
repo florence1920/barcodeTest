@@ -1,28 +1,27 @@
 <template>
-    <div class="wrapAll">
-        <div class="logo">
-            <p>기린아 강릉투어</p>
+    <div class="qrWrap">
+        <img src="" alt="" class="logo"> 
+        
+        <div class="timerSec">
+            <p class="explain">48시간이 지나면 사용이 불가능 합니다</p>
+            <div class="line"></div>
+            <p class="time">48:00:00</p>
         </div>
-        <!-- // logo end -->
 
-        <div class="section">
-            <!-- <div class="timer">
-                <p>48:00:00</p>
-            </div> -->
-            <!-- //timer end -->
+        <div class="userInfo">
             <div class="qrSec">
                 <qr-gen></qr-gen>
-                <p class="num">{{this.$store.state.user.goods}}</p>
+                <!-- <p class="num">{{this.$store.state.user.goods}}</p> -->
             </div>
-            <!-- // qrSec end -->
-
-            <div class="userInfo">
+            <p class="tit">[강릉투어패스] 강릉투어패스 48시간 프리패스</p>
+            <div class="box">
+                <p>{{this.$store.state.user.headCount}}</p>
+            </div>
+            <div class="info">
                 <p class="name">구매자 이름 : {{this.$store.state.user.userName}}</p>
                 <p class="phoneNum">휴대폰번호 : {{this.$store.state.user.phone}}</p>
             </div>
-            <!-- // userInfo end -->
         </div>
-        <!-- // section end -->
     </div>
     
 </template>
@@ -37,17 +36,23 @@ export default {
 </script>
 
 <style scoped>
-    .wrapAll {overflow: hidden; width: 30%; background-color: #FF6A6A; text-align: center; margin: 0 auto;}
-    .wrapAll p {color: #fff; font-size: 20px;}
+    .wrapAll .qrWrap {overflow: hidden; width: 100%; height: 900px; text-align: center; background-color: #3b579d; color: #fff; font-weight: 600; border-radius: 30px; padding: 50px 10px;}
 
-    .wrapAll .logo {float: right; margin: 0 50px 0;}
-    .wrapAll .logo p {font-size: 30px;}
+    .wrapAll .qrWrap .timerSec {margin: 0 0 20px 0;}
+    .wrapAll .qrWrap .timerSec > p {margin: 10px 0;}
+    .wrapAll .qrWrap .timerSec .explain {}
+    .wrapAll .qrWrap .timerSec .line {width: 300px; border-inline: #3b579d;}
+    .wrapAll .qrWrap .timerSec .time {font-size: 70px; font-weight: 600;}
+    
+    .wrapAll .qrWrap .userInfo {width: 90%; height: auto; background-color: #fff; text-align: center; border-radius: 15px; padding: 30px 10px; margin: 0 auto;}
+    .wrapAll .qrWrap .userInfo .qrSec {width: 65%; height: auto; border: 3px solid #3b579d; border-radius: 10px; padding: 5px 0; margin: 0 auto;}
+    .wrapAll .qrWrap .userInfo p {color: #000;}
+    .wrapAll .qrWrap .userInfo .tit {margin: 20px 0;}
+    .wrapAll .qrWrap .userInfo .box {width: 90%; height: auto;border: 2px solid #3b579d; padding: 10px 0; margin: 0 20px auto;}
+    /* .wrapAll .qrWrap .userInfo .box p {color: #3b579d; font-weight: 600;} */
 
-    .wrapAll .section .timer {margin: 50px 0;}
-    .wrapAll .section .timer p {font-size: 60px;}
+    .wrapAll .qrWrap .userInfo .info {margin: 20px 0 0;}
+    .wrapAll .qrWrap .userInfo .info > p {margin: 5px 0 0 0;}
 
-    .wrapAll .section .qrSec {float: center; margin: 50px 0; }
-    .wrapAll .section .qrSec .num {margin: 20px 0; font-weight: 600;}
 
-    .wrapAll .section .userInfo {}
 </style>

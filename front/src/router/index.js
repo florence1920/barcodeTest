@@ -1,22 +1,48 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import MainPage from '../views/MainPage.vue'
 import Home from '../views/test/Home.vue'
 import Generate from '../views/test/Generate.vue'
 import QrGenerator from '../views/test/QrGenerator.vue'
 import QrReader from '../views/test/QrReader.vue'
 import QrShowView from '../views/user/QrShowView.vue'
+import ChartView from '../views/test/ChartView.vue'
 
 import AdminView from '../views/admin/AdminView.vue'
-import PurchaseView from '../views/user/PurchaseView.vue'
+import QrScanner from '../views/admin/QrScannerView.vue'
+import StoreInfoView from '../views/admin/StoreInfoView.vue'
+import SalesInfoView from '../views/admin/SalesInfoView.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
+  //user
   {
     path: '/',
-    name: 'MainPage',
-    component: MainPage
+    name: 'QrShowView',
+    component: QrShowView
   },
+  //admin
+  {
+    path: '/admin',
+    name: 'AdminView',
+    component: AdminView
+  },
+  {
+    path: '/admin/qrscanner',
+    name: 'QrScanner',
+    component: QrScanner
+  },
+  {
+    path: '/admin/storeinfo',
+    name: 'StoreInfoView',
+    component: StoreInfoView
+  },
+  {
+    path: '/admin/salesinfo',
+    name: 'SalesInfoView',
+    component: SalesInfoView
+  },
+
   //test
   {
     path: '/test',
@@ -38,23 +64,10 @@ const routes = [
     name: 'QrReader',
     component: QrReader
   },
-  //user
   {
-    path: '/user/purchase',
-    name: 'PurchaseView',
-    component: PurchaseView
-  },
-  //
-  {
-    path: '/qrshow',
-    name: 'QrShowView',
-    component: QrShowView
-  },
-
-  {
-    path: '/admin',
-    name: 'AdminView',
-    component: AdminView
+    path: '/test/chart',
+    name: 'ChartView',
+    component: ChartView
   },
 ]
 

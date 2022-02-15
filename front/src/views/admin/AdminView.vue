@@ -1,8 +1,5 @@
 <template>
-    <div>
-        관리자View 메인 페이지
-        <admin></admin>
-    </div>
+    <admin></admin>
 </template>
 
 <script>
@@ -13,6 +10,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>
